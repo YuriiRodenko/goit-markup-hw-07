@@ -1,0 +1,170 @@
+:root {
+    --iris-primary-brand: #4D5AE5;
+    --navy-dark: #2E2F42;
+    --gree-success: #31D0AA;
+    --slate-text: #434455;
+    --light-slate: #8E8F99;
+    --cornflower-subtle-text: #E7E9FC;
+    --cloud-light: #F4F4FD;
+}
+
+/* ______________BODY__________________________ */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.02em;
+    color: var(--slate-text);
+}
+
+
+/* ______________HEADER________________________ */
+
+.logo {
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 18px;
+    line-height: calc(21/18);
+    letter-spacing: 0.03em;
+    text-decoration-line: none;
+    color: var(--iris-primary-brand);
+    text-decoration: none;
+}
+
+.logo-header {
+    color: var(--navy-dark);
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+    color: var(--slate-text);
+}
+
+.nav-list-item {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(24/16);
+}
+
+
+.this-page {
+    color: var(--iris-primary-brand);
+}
+
+.contacts-list-item {
+    font-size: 16px;
+    line-height: calc(24/16);
+}
+
+.contacts-list-item:hover,
+.contacts-list-item:focus {
+    color: var(--iris-primary-brand);
+}
+
+/* ______________HERO__________________________ */
+
+.hero {
+    background: var(--navy-dark);
+}
+
+.title {
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1.07;
+    color: #FFFFFF;
+}
+
+.main-botton {
+    width: 170px;
+    height: 51px;
+    border-radius: 4px;
+    background: var(--iris-primary-brand);
+    border: 0px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(19/16);
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+.main-botton:active {
+    background: #404BBF;
+}
+
+/* ______________FEATURES SECTION______________ */
+
+.heading {
+    font-weight: 600;
+    color: var(--navy-dark);
+    font-size: 36px;
+    line-height: 1.11;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.caption {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.features-list-item {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ______________WORK EXAMPLES_________________ */
+
+/* ______________OUR TEAM______________________ */
+
+.team {
+    background-color: var(--cloud-light);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ______________FOOTER________________________ */
+
+.footer {
+    background-color: var(--navy-dark);
+    color: var(--cornflower-subtle-text);
+}
+
+.logo-footer {
+    color: var(--cloud-light);
+}
+
+/* ______________PORTFOLIO________________________ */
+
+.filter-btn {
+    border: 1px;
+    border-style: solid;
+    border-color: var(--cornflower-subtle-text);
+    border-radius: 4px;
+    background-color: var(--cloud-light);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--iris-primary-brand);
+    cursor: pointer;
+}
