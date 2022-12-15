@@ -10,28 +10,23 @@
 
 /* ______________BODY__________________________ */
 
+
 body {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.02em;
     color: var(--slate-text);
 }
 
-
-/* ______________HEADER________________________ */
-
-.logo {
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 18px;
-    line-height: calc(21/18);
-    letter-spacing: 0.03em;
-    text-decoration-line: none;
-    color: var(--iris-primary-brand);
-    text-decoration: none;
-}
-
-.logo-header {
-    color: var(--navy-dark);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0px;
+    padding: 0px;
 }
 
 .list {
@@ -42,16 +37,63 @@ body {
     text-decoration: none;
 }
 
+.container {
+    width: 1158px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+}
+
+/* ______________HEADER________________________ */
+
+.header {
+    box-shadow: 0px 1px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
+}
+
+.header >.container {
+    display: flex ;
+    align-items: center;
+    justify-items: auto;
+}
+
+.logo {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(21/18);
+    letter-spacing: 0.03em;
+    text-decoration-line: none;
+    color: var(--iris-primary-brand);
+    text-decoration: none;
+    margin: 24px 77px 24px 0px;
+}
+
+.logo-header {
+    color: var(--navy-dark);
+}
+
 .link:hover,
 .link:focus {
     color: var(--slate-text);
 }
 
-.nav-list-item {
+.nav-list {
+    display: flex;
     font-weight: 500;
     font-size: 16px;
     line-height: calc(24/16);
     color: var(--navy-dark);
+
+}
+
+.nav-list-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-list-item:not(:last-child) {
+    margin-right: 40px;
 }
 
 
@@ -59,10 +101,22 @@ body {
     color: var(--iris-primary-brand);
 }
 
+.contact-list {
+    display: flex;
+    margin-left: auto;
+}
+
 .contacts-list-item {
     font-size: 16px;
     line-height: calc(24/16);
     color: var(--slate-text);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.contacts-list-item:not(:last-child) {
+    margin-right: 40px;
 }
 
 .contacts-list-item:hover,
@@ -73,7 +127,15 @@ body {
 /* ______________HERO__________________________ */
 
 .hero {
+    text-align: center;
     background: var(--navy-dark);
+    padding-top: 192px;
+    padding-bottom: 192px;
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .title {
@@ -81,6 +143,7 @@ body {
     font-size: 56px;
     line-height: 1.07;
     color: #FFFFFF;
+    margin-bottom: 48px;
 }
 
 .main-botton {
@@ -106,10 +169,12 @@ body {
 /* ______________FEATURES SECTION______________ */
 
 .heading {
+    text-align: center;
     font-weight: 700;
     color: var(--navy-dark);
     font-size: 36px;
     line-height: 1.11;
+    margin-bottom: 72px;
 }
 
 .visually-hidden {
@@ -125,17 +190,36 @@ body {
     overflow: hidden;
 }
 
-.caption {
-    font-size: 20px;
-    line-height: 1.2;
+.features .container {
+    display: flex;
 }
 
 .features-list-item {
+    width: 264px;
     font-size: 16px;
     line-height: 1.5;
 }
 
+.features .container {
+    justify-content: space-between;
+}
+
+.caption {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
 /* ______________WORK EXAMPLES_________________ */
+
+.works-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.works .container {
+    padding: 0px;
+}
 
 /* ______________OUR TEAM______________________ */
 
@@ -143,23 +227,67 @@ body {
     background-color: var(--cloud-light);
     font-size: 16px;
     line-height: 1.5;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
+
+.team-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-card {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-card-photo {
+    display: block;
+}
+
+.team-content {
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.team-content .caption {
+    margin-bottom: 8px;
+}
+
+
 
 /* ______________FOOTER________________________ */
 
 .footer {
     background-color: var(--navy-dark);
     color: var(--cornflower-subtle-text);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 56px;
 }
 
 .logo-footer {
     color: var(--cloud-light);
 }
 
+.footer-text {
+    width: 264px;
+    margin-top: 16px;
+}
+
 /* ______________PORTFOLIO________________________ */
 
 .filter {
-    background-color: #E5E5E5;
+    /* background-color: #E5E5E5; */
+}
+
+.filter-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 96px;
+    margin-bottom: 72px;
 }
 
 .filter-btn {
@@ -176,6 +304,10 @@ body {
     cursor: pointer;
 }
 
+.filter-list-item:not(:last-child) {
+    margin-right: 24px;
+}
+
 .filter-btn:hover,
 .filter-btn:focus {
     background-color: var(--iris-primary-brand);
@@ -186,8 +318,24 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.project-card {
-    background: #FFFFFF;
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -48px;
+    margin-left: -24px;
+    padding-bottom: 120px;
+}
+
+.card {
+    width: 360px;
     border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    margin-top: 48px;
+    margin-left: 24px;
+}
+
+.card-content {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding-left: 16px;
 }
