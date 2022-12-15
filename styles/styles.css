@@ -217,8 +217,12 @@ ul {
     justify-content: space-between;
 }
 
-.works .container {
-    padding: 0px;
+.works .section {
+    padding-bottom: 0px;
+}
+
+.works-img {
+    display: block;
 }
 
 /* ______________OUR TEAM______________________ */
