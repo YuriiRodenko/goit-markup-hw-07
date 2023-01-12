@@ -1,7 +1,7 @@
 :root {
     --iris-primary-brand: #4D5AE5;
     --ocean-pressed-state: #404BBF;
-    --navy-dark: #2E2F42;
+    --navy-blue-dark: #2E2F42;
     --gree-success: #31D0AA;
     --slate-text: #434455;
     --light-slate: #8E8F99;
@@ -68,7 +68,7 @@ ul {
 }
 
 .logo-header {
-    color: var(--navy-dark);
+    color: var(--navy-blue-dark);
 }
 
 .link:hover,
@@ -81,16 +81,26 @@ ul {
     font-weight: 500;
     font-size: 16px;
     line-height: calc(24/16);
-    color: var(--navy-dark);
     margin-left: 77px;
 }
+
+.nav-list-item .link {
+    color: var(--navy-blue-dark);
+}
+
+.nav-list-item:hover .link,
+.nav-list-item:focus .link {
+    color: var(--ocean-pressed-state);
+}
+
+
 
 .nav-list-item:not(:last-child) {
     margin-right: 40px;
 }
 
-.this-page {
-    color: var(--iris-primary-brand);
+.nav-list-item .active {
+    color: var(--ocean-pressed-state);
 }
 
 .contact-list {
@@ -108,8 +118,8 @@ ul {
     margin-right: 40px;
 }
 
-.contacts-list-item:hover,
-.contacts-list-item:focus {
+.contacts-list-item:hover .link,
+.contacts-list-item:focus .link {
     color: var(--iris-primary-brand);
 }
 
@@ -117,6 +127,7 @@ ul {
 
 .hero {
     max-width: 1600px;
+    margin: 0 auto;
     text-align: center;
     background: var(--grey);
     padding-top: 192px;
@@ -331,7 +342,7 @@ ul {
 /* ______________FOOTER________________________ */
 
 .footer {
-    background-color: var(--navy-dark);
+    background-color: var(--navy-blue-dark);
     color: var(--cornflower-accent);
     padding: 120px 0;
 }
@@ -472,5 +483,5 @@ margin-right: 80px;
 .card-content {
     padding: 32px 0;
     padding-left: 16px;
-    color: var(--navy-dark);
+    color: var(--navy-blue-dark);
 }
