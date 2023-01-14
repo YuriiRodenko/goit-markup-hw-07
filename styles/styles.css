@@ -132,7 +132,7 @@ ul {
     background: var(--grey);
     padding-top: 192px;
     padding-bottom: 192px;
-    background-image: linear-gradient(var(--navy-blue-modal), var(--navy-blue-modal)), url(../images/people-office.jpg);
+    background-image: linear-gradient(var(--grey), var(--)), url(../images/people-office.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -319,6 +319,7 @@ ul {
     height: 88px;
     border: 1px solid var(--light-slate);
     border-radius: 4px;
+    color: var(--light-slate);
 }
 
 .customers-list-link:hover,
@@ -330,14 +331,13 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    fill: var(--light-slate);
+    fill: currentColor;
 }
 
 .customers-list-link:hover .customers-icon,
 .customers-list-link:focus .customers-icon {
-    fill: var(--ocean-pressed-state)
+    fill: var(--ocean-pressed-state);
 }
-
 
 /* ______________FOOTER________________________ */
 
@@ -462,7 +462,6 @@ margin-right: 80px;
 
 .card-set img {
     display: block;
-
 }
 
 .card {
@@ -470,12 +469,16 @@ margin-right: 80px;
     flex-basis: 360px;
     margin-top: 48px;
     margin-left: 24px;
+}
+
+.card-link {
+    display: block;
     /* border: 1px solid var(--cornflower-accent); */
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.card:hover,
-.card:focus {
+.card-link:hover,
+.card-link:focus {
     /* border: 0.5px solid var(--cloud-light); */
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
