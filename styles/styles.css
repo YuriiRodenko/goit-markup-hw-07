@@ -132,7 +132,7 @@ ul {
     background: var(--grey);
     padding-top: 192px;
     padding-bottom: 192px;
-    background-image: linear-gradient(var(--grey), var(--)), url(../images/people-office.jpg);
+    background-image: linear-gradient(var(--grey), var(--grey)), url(../images/people-office.jpg);
     background-size: cover;
     background-position: center;
 }
