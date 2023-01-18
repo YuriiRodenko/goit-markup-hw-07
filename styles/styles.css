@@ -473,13 +473,11 @@ margin-right: 80px;
 
 .card-link {
     display: block;
-    /* border: 1px solid var(--cornflower-accent); */
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .card-link:hover,
 .card-link:focus {
-    /* border: 0.5px solid var(--cloud-light); */
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
@@ -487,4 +485,10 @@ margin-right: 80px;
     padding: 32px 0;
     padding-left: 16px;
     color: var(--navy-blue-dark);
+    border: 1px solid var(--cornflower-accent);
+}
+
+.card-link:hover .card-content,
+.card-link:focus .card-content {
+    border: 0.5px solid var(--cloud-light);
 }
