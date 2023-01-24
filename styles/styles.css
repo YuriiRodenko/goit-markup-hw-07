@@ -72,28 +72,31 @@ h1, h2, h3, h4, p {
 
 /* ======MOBILE VERSION ========================================================================= */
 
-@media screen and (min-device-pixel-ratio: 1) and (max-width: 767.5px),
-       screen and (min-resolution : 96dpi) and (max-width: 767.5px),
-       screen and (min-resolution : 1dppx) and (max-width: 767.5px){
+@media 
+screen and (min-device-pixel-ratio: 1) and (max-width: 767.5px),
+screen and (min-resolution : 96dpi) and (max-width: 767.5px),
+screen and (min-resolution : 1dppx) and (max-width: 767.5px){
   .hero-section {
     background-image: 
       linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
       url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(mobile)@1x.jpg");
-   }
+  }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767.5px),
-       screen and (min-resolution : 192dpi) and (max-width: 767.5px),
-       screen and (min-resolution : 2dppx) and (max-width: 767.5px){
+@media 
+screen and (min-device-pixel-ratio: 2) and (max-width: 767.5px),
+screen and (min-resolution : 192dpi) and (max-width: 767.5px),
+screen and (min-resolution : 2dppx) and (max-width: 767.5px){
   .hero-section {
     background-image: 
       linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
       url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(mobile)@2x.jpg");
   }
 }
-@media screen and (min-device-pixel-ratio: 3) and (max-width: 767.5px),
-       screen and (min-resolution : 288dpi) and (max-width: 767.5px),
-       screen and (min-resolution : 3dppx) and (max-width: 767.5px){
+@media 
+screen and (min-device-pixel-ratio: 3) and (max-width: 767.5px),
+screen and (min-resolution : 288dpi) and (max-width: 767.5px),
+screen and (min-resolution : 3dppx) and (max-width: 767.5px){
   .hero-section {
     background-image: 
       linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
@@ -307,8 +310,7 @@ h1, h2, h3, h4, p {
   display: flex;
   }
 
-  /*---Styles: Main Content -> section "Hero" */
-   .hero-section .container{
+  .hero-section .container{
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -316,7 +318,6 @@ h1, h2, h3, h4, p {
     padding-bottom: 112px;
   }
   .hero-title {
-    /* width: 318px; */
     margin-bottom: 72px;
     text-align: center;
     font-weight: 700;
@@ -328,7 +329,7 @@ h1, h2, h3, h4, p {
   }
 
   .hero-button {
-    /* display: block; */
+ 
     padding: 16px 32px;
     margin: 0 auto; 
     font-weight: 500;
@@ -355,7 +356,7 @@ h1, h2, h3, h4, p {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 
-  /*---Styles: Main Content -> section "Features" */
+
   .features-section {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -381,12 +382,12 @@ h1, h2, h3, h4, p {
     color: var(--slate);
   }
 
-  /*---Styles: Main Content -> section "What we are doing" */
+
   .whatwearedoing-section{
     display: none;
   }
 
-  /*---Styles: Main Content -> section "Our team" */
+
   .ourteam-section {
     padding-top: 96px;
     padding-bottom: 104px;
