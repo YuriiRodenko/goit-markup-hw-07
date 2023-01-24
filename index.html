@@ -9,7 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
@@ -17,7 +20,7 @@
     <header class="header">
         <div class="container">
             <a class="logo" href="./index.html">WEB<span class="logo-header">STUDIO</span></a>
-            <nav>
+            <nav class="navigation>
                 <ul class="list nav-list">
                     <li class="nav-list-item"><a class="link page-current" href="./index.html">Studio</a></li>
                     <li class="nav-list-item"><a class="link" href="./portfolio.html">Portfolio</a></li>
@@ -28,6 +31,67 @@
                 <li class="contacts-list-item"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
                 <li class="contacts-list-item"><a class="link" href="tel:+11(000)1111111">+11 (000) 111-11-11</a></li>
             </ul>
+            <!--MOBILE MENU-->
+            <button 
+                class="mobile-menu-open-button js-open-menu" 
+                aria-expanded="false" 
+                aria-controls="mobile-menu">
+                <svg class="mobile-menu-open-icon" width="32" height="22">
+                    <use href="./images/sprite.svg#burger"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu-container js-menu-container" id="mobile-menu">
+            <button class="mobile-menu-close-button js-close-menu">
+                <svg class="mobile-menu_close-icon" width="8" height="8">
+                    <use href="./images/sprite.svg#close-button"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu list">
+                <li class="mobile-menu-item">
+                    <a class="mobile-menu-link page-current link" href="./index.html">Studio</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a class="mobile-menu-link link" href="">Contacts</a>
+                </li>
+            </ul>
+            <ul class="mobile-menu-contacts list">
+                <li class="mobile-menu-contacts-item"><a class="mobile-menu-contacts-link link" href="tel:+11(000)1111111">+11 (000) 111-11-11</a></li>
+                <li class="mobile-menu-contacts-item"><a class="mobile-menu-contacts-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            </ul>
+            <ul class="mobile-menu-icons list">
+                <li class="mobile-menu-icons-item">
+                    <a href="#" class="mobile-menu-icons-item-link link">
+                        <svg class="mobile-menu-icon-svg">
+                            <use href="./images/sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="mobile-menu-icons-item">
+                    <a href="#" class="mobile-menu-icons-item-link link">
+                        <svg class="mobile-menu-icon-svg">
+                            <use href="./images/sprite.svg#twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="mobile-menu-icons-item">
+                    <a href="#" class="mobile-menu-icons-item-link link">
+                        <svg class="mobile-menu-icon-svg">
+                            <use href="./images/sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="mobile-menu-icons-item">
+                    <a href="#" class="mobile-menu-icons-item-link link">
+                        <svg class="mobile-menu-icon-svg">
+                            <use href="./images/sprite.svg#linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
     <!--Main page-->
@@ -36,7 +100,12 @@
         <section class="hero">
             <div class="container">
                 <h1 class="title">Effective Solutions<br>for Your Business</h1>
-                <button class="main-botton" type="button" data-modal-open>Order Service</button>
+                <button class="main-botton" 
+                type="button" data-modal-open
+                data-modal-open
+                aria-expanded="false"
+                aria-controls="modal"
+                >Order Service</button>
             </div>
         </section>
         <!--Features-->
@@ -45,40 +114,20 @@
                 <h2 class="heading visually-hidden">Features</h2>
                 <ul class="list features-list">
                     <li class="features-list-item">
-                        <div class="features-box-icon">
-                            <svg width="64" height="64">
-                                <use href="./images/icons.svg#antenna"></use>
-                            </svg>
-                        </div>
                         <h3 class="caption">Strategy</h3>
-                        <p>Our goal is to identify the business problem to walk away with the perfect and creative solution.</p>
+                        <p class="features-item-text">Our goal is to identify the business problem to walk away with the perfect and creative solution.</p>
                     </li>
                     <li class="features-list-item">
-                        <div class="features-box-icon">
-                            <svg width="64" height="64">
-                                <use href="./images/icons.svg#clock"></use>
-                            </svg>
-                        </div>
                         <h3 class="caption">Punctuality</h3>
-                        <p>Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
+                        <p class="features-item-text">Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
                     </li>
                     <li class="features-list-item">
-                        <div class="features-box-icon">
-                            <svg width="64" height="64">
-                                <use href="./images/icons.svg#diagram"></use>
-                            </svg>
-                        </div>
                         <h3 class="caption">Diligence</h3>
-                        <p>Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
+                        <p class="features-item-text">Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
                     </li>
                     <li class="features-list-item">
-                        <div class="features-box-icon">
-                            <svg width="64" height="64">
-                                <use href="./images/icons.svg#astronaut"></use>
-                            </svg>
-                        </div>
                         <h3 class="caption">Technologies</h3>
-                        <p>Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
+                        <p class="features-item-text">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
                     </li>
                 </ul>
             </div>
@@ -89,13 +138,28 @@
                 <h2 class="heading">What are we doing</h2>
                 <ul class="list works-list">
                     <li>
-                        <img class="works-img" width="360" src="./images/photo-1.jpg" alt="photo 1">
+                        <img class="img"
+                            srcset="./images/our-work/monitor@1x.jpg 1x, ./images/our-work/monitor@2x.jpg 2x, ./images/our-work/monitor@3x.jpg 3x"
+                            src="./images/our-work/monitor@1x.jpg" 
+                            alt="Picture of computer monitor with charts on it." 
+                            width="360"
+                            height="300">
                     </li>
                     <li>
-                        <img class="works-img" width="360" src="./images/photo-2.jpg" alt="photo 2">
+                        <img class="img"
+                            srcset="./images/our-work/cellphone-screens@1x.jpg 1x, ./images/our-work/cellphone-screens@2x.jpg 2x, ./images/our-work/cellphone-screens@3x.jpg 3x"
+                            src="./images/our-work/cellphone-screens@1x.jpg"
+                            alt="Image of a mobile phone with flying screens and instant messengers on them." 
+                            width="360" 
+                            height="300">
                     </li>
                     <li>
-                        <img class="works-img" width="360" src="./images/photo-3.jpg" alt="photo 3">
+                        <img class="img"
+                            srcset="./images/our-work/labtop-cellphone@1x.jpg 1x, ./images/our-work/labtop-cellphone@2x.jpg 2x, ./images/our-work/labtop-cellphone@3x.jpg 3x"
+                            src="./images/our-work/labtop-cellphone@1x.jpg" 
+                            alt="LabTop and Phone picture with some applications." 
+                            width="360"
+                            height="300">
                     </li>
                 </ul>
             </div>
@@ -103,13 +167,18 @@
         <!--Our team-->
         <section class="team">
             <div class="container">
-                <h2 class="heading">Our Team</h2>
+                <h2 class="heading team-title">Our Team</h2>
                 <ul class="list team-list">
                     <li class="team-card">
-                        <img class="team-card-photo" width="264" src="./images/guerrero.jpg" alt="Mark Guerrero">
+                        <img class="team-card-photo img"
+                            srcset="./images/our-team/mark-guerrero@1x.jpg 1x, ./images/our-team/mark-guerrero@2x.jpg 2x, ./images/our-team/mark-guerrero@3x.jpg 3x"
+                            src="./images/our-team/mark-guerrero.jpg" 
+                            alt="Photo of Mark Guerrero" 
+                            width="264" 
+                            height="260">
                         <div class="team-card-content">
                             <h3 class="caption">Mark Guerrero</h3>
-                            <p>Product Designer</p>
+                            <p class="team-card-position">Product Designer</p>
                             <ul class="social-list list">
                                 <li class="social-list-item">
                                     <a href="" class="social-list-link">
@@ -143,10 +212,15 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img class="team-card-photo" width="264" src="./images/ford.jpg" alt="Tom Ford">
+                        <img class="ourteam-card-photo"
+                            srcset="./images/our-team/tom-ford@1x.jpg 1x, ./images/our-team/tom-ford@2x.jpg 2x, ./images/our-team/tom-ford@3x.jpg 3x"
+                            src="./images/our-team/tom-ford.jpg" 
+                            alt="Photo of Tom Ford" 
+                            width="264" 
+                            height="260">
                         <div class="team-card-content">
                             <h3 class="caption">Tom Ford</h3>
-                            <p>Frontend Developer</p>
+                            <p class="team-card-position">Frontend Developer</p>
                             <ul class="social-list list">
                                 <li class="social-list-item">
                                     <a href="" class="social-list-link">
@@ -180,10 +254,15 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img class="team-card-photo" width="264" src="./images/garsia.jpg" alt="Camila Garsia">
+                        <img class="ourteam-card-photo"
+                            srcset="./images/our-team/camila-garcia@1x.jpg 1x,./images/our-team/camila-garcia@2x.jpg 2x, ./images/our-team/camila-garcia@3x.jpg 3x"
+                            src="./images/our-team/camila-garcia.jpg" 
+                            alt="Photo of Camila Garcia" 
+                            width="264" 
+                            height="260">
                         <div class="team-card-content">
                             <h3 class="caption">Camila Garcia</h3>
-                            <p>Marketing</p>
+                            <p class="team-card-position">Marketing</p>
                             <ul class="social-list list">
                                 <li class="social-list-item">
                                     <a href="" class="social-list-link">
@@ -217,10 +296,15 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img class="team-card-photo" width="264" src="./images/wilson.jpg" alt="Daniel Wilson">
+                        <img class="ourteam-card-photo"
+                            srcset="./images/our-team/daniel-wilson@1x.jpg 1x, ./images/our-team/daniel-wilson@2x.jpg 2x, ./images/our-team/daniel-wilson@3x.jpg 3x"
+                            src="./images/our-team/daniel-wilson.jpg" 
+                            alt="Photo of Daniel Wilson" 
+                            width="264" 
+                            height="260">
                         <div class="team-card-content">
                             <h3 class="caption">Daniel Wilson</h3>
-                            <p>UI Designer</p>
+                            <p class="team-card-position">UI Designer</p>
                             <ul class="social-list list">
                                 <li class="social-list-item">
                                     <a href="" class="social-list-link">
@@ -348,10 +432,18 @@
                 </ul>
             </div>
             <!-- subscribe -->
-            <div class="footer-subtcribe">
-                <p class="footer-subtcribe-desc">Subscribe</p>
+            <div class="footer-subcribe">
+                <p class="footer-subcribe-desc">Subscribe</p>
                 <div class="footer-subscribe_input">
-                    <input type="email" name="email" placeholder="E-mail" class="footer-input-email" pattern="^\S+@\S+$" size="30"
+                    <input 
+                        class="footer-input-email"  
+                        type="email" 
+                        name="email" 
+                        placeholder="E-mail" 
+                        pattern="[a-A][z-Z][0-9]@[a-A][z-Z][0-9]"
+                        title="example@mail.com"
+                        minlength="5"
+                        maxlength="40"
                         required>
                     <button type="submit" class="footer-btn-subscribe btn">Subscribe
                         <svg class="footer-icon-send" width="24" height="20">
@@ -430,6 +522,13 @@
             </form>
         </div>
     </div>
+    <script 
+    defer 
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous">
+    </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
