@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /*Задаємо для всіх елементів формулу розрахунку розмірів як border-box */
+} 
+
+/*Глобальні змінні*/
 :root {
   --iris : #4d5ae5;
   --ocean : #404BBF;
@@ -24,19 +31,19 @@ body {
   background-color: #ffff;
 }
 .list{
-  list-style: none;             
-  padding: 0;                   
-  margin: 0;                     
+  list-style: none;               /* стиль усіх списків без маркерів */
+  padding: 0;                     /* скидаємо всі падінги та маржини для списків за замовченням */
+  margin: 0;                      /* скидаємо всі падінги та маржини для списків за замовченням*/
 }
 .link{
-  text-decoration: none;          
+  text-decoration: none;          /* стиль для всіх посилань на макети : без підкреслення*/
 }
 .pointer{
   font-family: inherit;
   cursor: pointer;
 }
 h1, h2, h3, h4, p {
-  margin: 0;                    
+  margin: 0;                      /* скидаємо всі маржини за замовченням для заголовків та параграфу*/
 }
 .img{
   display: block;
@@ -72,31 +79,28 @@ h1, h2, h3, h4, p {
 
 /* ======MOBILE VERSION ========================================================================= */
 
-@media 
-screen and (min-device-pixel-ratio: 1) and (max-width: 767.5px),
-screen and (min-resolution : 96dpi) and (max-width: 767.5px),
-screen and (min-resolution : 1dppx) and (max-width: 767.5px){
+@media screen and (min-device-pixel-ratio: 1) and (max-width: 767.5px),
+       screen and (min-resolution : 96dpi) and (max-width: 767.5px),
+       screen and (min-resolution : 1dppx) and (max-width: 767.5px){
   .hero-section {
     background-image: 
       linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
       url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(mobile)@1x.jpg");
-  }
+   }
 }
 
-@media 
-screen and (min-device-pixel-ratio: 2) and (max-width: 767.5px),
-screen and (min-resolution : 192dpi) and (max-width: 767.5px),
-screen and (min-resolution : 2dppx) and (max-width: 767.5px){
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767.5px),
+       screen and (min-resolution : 192dpi) and (max-width: 767.5px),
+       screen and (min-resolution : 2dppx) and (max-width: 767.5px){
   .hero-section {
     background-image: 
       linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
       url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(mobile)@2x.jpg");
   }
 }
-@media 
-screen and (min-device-pixel-ratio: 3) and (max-width: 767.5px),
-screen and (min-resolution : 288dpi) and (max-width: 767.5px),
-screen and (min-resolution : 3dppx) and (max-width: 767.5px){
+@media screen and (min-device-pixel-ratio: 3) and (max-width: 767.5px),
+       screen and (min-resolution : 288dpi) and (max-width: 767.5px),
+       screen and (min-resolution : 3dppx) and (max-width: 767.5px){
   .hero-section {
     background-image: 
       linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
@@ -310,7 +314,8 @@ screen and (min-resolution : 3dppx) and (max-width: 767.5px){
   display: flex;
   }
 
-  .hero-section .container{
+  /*---Styles: Main Content -> section "Hero" */
+   .hero-section .container{
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -318,6 +323,7 @@ screen and (min-resolution : 3dppx) and (max-width: 767.5px){
     padding-bottom: 112px;
   }
   .hero-title {
+    /* width: 318px; */
     margin-bottom: 72px;
     text-align: center;
     font-weight: 700;
@@ -329,7 +335,7 @@ screen and (min-resolution : 3dppx) and (max-width: 767.5px){
   }
 
   .hero-button {
- 
+    /* display: block; */
     padding: 16px 32px;
     margin: 0 auto; 
     font-weight: 500;
@@ -356,7 +362,7 @@ screen and (min-resolution : 3dppx) and (max-width: 767.5px){
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 
-
+  /*---Styles: Main Content -> section "Features" */
   .features-section {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -382,12 +388,12 @@ screen and (min-resolution : 3dppx) and (max-width: 767.5px){
     color: var(--slate);
   }
 
-
+  /*---Styles: Main Content -> section "What we are doing" */
   .whatwearedoing-section{
     display: none;
   }
 
-
+  /*---Styles: Main Content -> section "Our team" */
   .ourteam-section {
     padding-top: 96px;
     padding-bottom: 104px;
@@ -418,7 +424,7 @@ screen and (min-resolution : 3dppx) and (max-width: 767.5px){
     padding: 32px 16px 32px 16px;
   }
   .ourteam-card-photo{
-    display: block;                 
+    display: block;                  /* вказуємо block, щоб прибрати зайву лінію під фото */
   }
   .ourteam-card-name {
     margin-bottom: 8px;
@@ -675,6 +681,7 @@ screen and (min-resolution : 3dppx) and (max-width: 767.5px){
     position: absolute;
     top: 50%;
     left: 50%;
+    max-width: 408px;
     width: calc(100% - 30px);
     padding-top: 72px;
     padding-left: 24px;
@@ -1012,3 +1019,540 @@ screen and (min-resolution : 3dppx) and (max-width: 767.5px){
 
     color: var(--slate);
   }
+/* ======MOBILE VERSION ========================================================================= */  
+
+
+
+
+/* ====== TABLET VERSION ========================================================================= */
+
+  @media screen and (min-device-pixel-ratio: 1) and (min-width: 768px) and (max-width: 1199.98px),
+         screen and (min-resolution : 96dpi) and  (min-width: 768px) and (max-width: 1199.98px),
+         screen and (min-resolution : 1dppx) and  (min-width: 768px) and (max-width: 1199.98px){
+    .hero-section {
+      background-image: 
+        linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+        url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(tablet)@1x.jpg");
+    }
+  }
+  
+  @media screen and (min-device-pixel-ratio: 2) and  (min-width: 768px) and (max-width: 1199.98px),
+         screen and (min-resolution : 192dpi) and  (min-width: 768px) and (max-width: 1199.98px),
+         screen and (min-resolution : 2dppx) and  (min-width: 768px) and (max-width: 1199.98px){
+    .hero-section {
+      background-image: 
+        linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+        url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(tablet)@2x.jpg");
+    }
+  }
+  @media screen and (min-device-pixel-ratio: 3) and  (min-width: 768px) and (max-width: 1199.98px),
+         screen and (min-resolution : 288dpi) and  (min-width: 768px) and (max-width: 1199.98px),
+         screen and (min-resolution : 3dppx) and  (min-width: 768px) and (max-width: 1199.98px){
+    .hero-section {
+      background-image: 
+        linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+        url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(tablet)@3x.jpg");
+    }
+  }
+  @media screen and (min-width: 767.98px){
+  
+      /*------------Styles: Studio page-----------------*/
+    
+      .container{
+        max-width: 768px;
+      }
+    
+      /*---Styles: Header */
+      .mobile-menu-open-button
+      {
+        display: none;
+      }
+      .mobile-menu-container
+      {
+        display: none;
+      }
+      .nav-menu-list {
+        display: flex;
+        gap: 40px;
+      }
+      .nav-menu-link {
+        position: relative;
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 22px; 
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: inherit;
+        transition: color var(--transition);
+      }
+      .current{
+        color: var(--ocean);
+      }
+      .current::after{
+        position: absolute;
+        bottom: 0px;
+        display: block;
+        height: 4px;
+        width: 100%;
+        content: "";
+    
+        background-color: var(--ocean);
+        border-radius: 2px;
+      }
+      .contacts-list {
+        display:block;
+      }
+      .contacts-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.04em;
+        color: inherit;
+        transition: color var(--transition);
+      }
+      .contacts-list li:first-child .contacts-link{
+        padding-top: 24px;
+        margin-bottom: 4px;
+      }
+      .contacts-list li:last-child .contacts-link{
+          padding-bottom: 10px;
+      }
+      .contacts-link:hover {
+        color: var(--ocean);
+      }
+      .contacts-link:focus {
+        color: var(--ocean);
+      }
+    
+      /*---Styles: Main Content -> section "Hero" */
+      .hero-section {
+        max-width: 768px;
+      }
+      .hero-title {
+        font-size: 56px;
+        line-height: 1.07;
+        width: 494px;
+        margin-bottom: 40px;
+      }
+  
+      /*---Styles: Main Content -> section "Features" */
+      .features-item-title {
+        text-align: left;
+      }
+      .features-list{
+          column-gap: 24px;
+      }
+      .features-list-item{
+          width: calc((100% - 24px) / 2); 
+      }
+  
+      /*---Styles: Main Content -> section "Our team" */
+      .ourteam-list {
+          column-gap: 24px;
+      }
+  
+      /*---Styles: Main Content -> section "Customers" */
+      .customers-list{
+        column-gap: 24px;
+        row-gap: 64px;
+      }
+      .customers-list-item{
+        width: 168px;
+      }
+    
+      /*---Styles: Footer */
+      .footer .container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 528px;
+        justify-content: space-between;
+      }
+      .logo-and-slogan{
+        width: 264px;
+        margin: 0px 24px 72px 0px;
+      }
+      .logo-word-footer, 
+      .social-media-footer-title, 
+      .footer-email-label-caption{
+        text-align: left;
+      }
+      .social-media{
+          margin-bottom: 0;
+      }
+      .subscribe-buttons-block{
+        display: flex;
+      }
+      .footer-email-input{
+        width: 264px;
+        margin-bottom: 0;
+        margin-right: 24px;
+      }
+    
+      /*---Styles: Modal window */
+      .modal{
+        width: 408px;
+      }
+       
+    
+    
+      /*------------Styles: Portfolio page-----------------*/
+    
+      .portfolio-section{
+        padding-top: 64px;
+        padding-bottom: 96px;
+      }
+    
+      /*---Styles: Portfolio page -> Main Content -> list of buttons */
+      .portfolio-buttons-list{
+        margin-bottom: 64px;
+        justify-content: center;
+      }
+     
+      /*---Styles: Portfolio page -> Main Content -> project cards */
+      .project-cards-list{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px; 
+      } 
+      .project-card{
+        flex-basis: calc((100% - 24px) / 2); 
+        background: var(--herotext-color);
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+      }
+      .project-card-images{
+        position: relative;
+        overflow: hidden;
+      }
+      .project-card-link{
+        display: block;
+        color: var(--navy-blue);
+        
+        transition: box-shadow var(--transition);    
+      }
+      .overlay{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 40px 32px;
+        overflow: auto;
+        transform: translate(0, 100%);
+    
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    
+        color: var(--cloud);
+        background-color: var(--iris);
+    
+        transition: transform var(--transition);    
+      }
+      .project-card-link:hover{
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+      }
+      .project-card-link:focus{
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+      }
+      .project-card-link:hover .overlay{
+        transform: translate(0, 0);
+      }
+      .project-card-link:focus .overlay{
+        transform: translate(0, 0);
+      }
+      .project-card-content{
+        padding: 32px 16px; 
+        border-left: 0.5px solid var(--cloud);
+        border-right: 0.5px solid var(--cloud);
+        border-bottom: 0.5px solid var(--cloud);
+      }
+      .project-card-caption{
+        margin-bottom: 8px;
+    
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+      }
+      .project-card-type{
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    
+        color: var(--slate);
+      }
+    
+    }
+
+/* ====== TABLET VERSION ========================================================================= */
+
+  
+  
+  
+/* ====== DESKTOP VERSION ========================================================================= */
+
+    @media screen and (min-device-pixel-ratio: 1) and (min-width: 1200px),
+           screen and (min-resolution : 96dpi) and (min-width: 1200px),
+           screen and (min-resolution : 1dppx) and (min-width: 1200px){
+      .hero-section {
+        background-image: 
+          linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+          url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(desktop)@1x.jpg");
+        }
+    }
+    
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+           screen and (min-resolution : 192dpi) and (min-width: 1200px),
+           screen and (min-resolution : 2dppx) and (min-width: 1200px){
+      .hero-section {
+        background-image: 
+          linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+          url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(desktop)@2x.jpg");
+    
+      }
+    }
+    @media screen and (min-device-pixel-ratio: 3) and (min-width: 1200px),
+           screen and (min-resolution : 288dpi) and (min-width: 1200px),
+           screen and (min-resolution : 3dppx) and (min-width: 1200px){
+      .hero-section {
+        background-image: 
+          linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+          url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(desktop)@3x.jpg");
+      }
+    }
+        
+    @media screen and (min-width: 1200px){
+    
+        /*------------Styles: Studio page-----------------*/
+      
+        .container{
+          max-width: 1158px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+    
+        /*---Styles: Header */
+        .nav-menu-link {
+            padding-bottom: 28px; 
+        }
+        .contacts-list {
+          display:flex;
+          gap: 40px;
+        }
+        .contacts-link {
+          padding-top: 24px;
+          padding-bottom: 28px;
+          font-size: 16px;
+          line-height: 1.5;
+          letter-spacing: 0.02em;
+         }
+        .contacts-list li:first-child .contacts-link{
+          margin-bottom: 0px;
+        }
+        /*---Styles: Main Content -> section "Hero" */
+        .hero-section {
+          max-width: 1440px;
+        }
+        .hero-section .container{
+          padding-top: 188px;
+          padding-bottom: 188px;
+        }
+        .hero-title {
+          margin-bottom: 48px;
+        }
+      
+        /*---Styles: Main Content -> section "Features" */
+        .features-section {
+          padding-top: 120px;
+          padding-bottom: 120px;
+        }
+        .features-list{
+          flex-wrap: nowrap;
+        }
+        .features-list-item::before{
+          height: 109px;
+          content: "";
+          margin-bottom: 8px;
+          display: block;
+      
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 4px;
+        }
+        .icon-antena::before{
+          background-image: 
+            url(../images/features/antenna.svg),
+            linear-gradient(to right, var(--cloud), var(--cloud));
+        } 
+        .icon-clock::before{
+          background-image: 
+            url(../images/features/clock.svg),
+            linear-gradient(to right, var(--cloud), var(--cloud));
+        }
+        .icon-diagram::before{
+          background-image: 
+            url(../images/features/diagram.svg),
+            linear-gradient(to right, var(--cloud), var(--cloud));
+        } 
+        .icon-astronaut::before{
+          background-image: 
+            url(../images/features/astronaut.svg),
+            linear-gradient(to right, var(--cloud), var(--cloud));
+        } 
+        .features-item-title {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 1.2;
+        }
+        .features-item-text {
+          font-weight: 400;
+        }
+      
+        /*---Styles: Main Content -> section "What we are doing" */
+        .whatwearedoing-section{
+          display: block;
+        }
+        .whatwearedoing-title {
+          margin-bottom: 72px;
+          text-align: center;
+          font-size: 36px;
+          line-height: 1.11;
+          letter-spacing: 0.02em;
+          text-transform: capitalize;
+        }
+        .whatwearedoing-list{
+          display: flex;
+          gap: 24px;
+        }
+      
+        /*---Styles: Main Content -> section "Our team" */
+        .ourteam-section {
+          padding-top: 120px;
+          padding-bottom: 120px;
+        }
+        .ourteam-list {
+          flex-wrap: nowrap;
+        }
+        
+        /*---Styles: Main Content -> section "Customers" */
+        .customers-section{
+          padding-top: 120px;
+          padding-bottom: 120px;
+        }
+        /* .customers-list{
+          flex-wrap: nowrap;
+        } */
+    
+      
+        /*---Styles: Footer */
+        .footer {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .footer .container{
+            /* flex-wrap: nowrap; */
+            padding: 0 16px;
+            width: unset;
+        }
+        .logo-and-slogan{
+          margin-bottom: 0px;
+          margin-right: 120px;
+        }
+        .social-media{
+          margin-left: 0; 
+        } 
+        
+       /*---Styles: Modal window */
+        
+    
+    
+      
+        /*------------Styles: Portfolio page-----------------*/
+      
+        .portfolio-section{
+          padding-top: 96px;
+          padding-bottom: 120px;
+        }
+      
+        /*---Styles: Portfolio page -> Main Content -> list of buttons */
+        .portfolio-buttons-list{
+          margin-bottom: 72px;
+        }
+      
+        /*---Styles: Portfolio page -> Main Content -> project cards */
+        .project-cards-list{
+          row-gap: 48px; 
+        } 
+        .project-card{
+          flex-basis: calc((100% - 48px) / 3); 
+          background: var(--herotext-color);
+          box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+        }
+        .project-card-images{
+          position: relative;
+          overflow: hidden;
+        }
+        .project-card-link{
+          display: block;
+          color: var(--navy-blue);
+          
+          transition: box-shadow var(--transition);    
+        }
+        .overlay{
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          padding: 40px 32px;
+          overflow: auto;
+          transform: translate(0, 100%);
+      
+          font-size: 16px;
+          line-height: 1.5;
+          letter-spacing: 0.02em;
+      
+          color: var(--cloud);
+          background-color: var(--iris);
+      
+          transition: transform var(--transition);    
+        }
+        .project-card-link:hover{
+          box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        }
+        .project-card-link:focus{
+          box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        }
+        .project-card-link:hover .overlay{
+          transform: translate(0, 0);
+        }
+        .project-card-link:focus .overlay{
+          transform: translate(0, 0);
+        }
+        .project-card-content{
+          padding: 32px 16px; 
+          border-left: 0.5px solid var(--cloud);
+          border-right: 0.5px solid var(--cloud);
+          border-bottom: 0.5px solid var(--cloud);
+        }
+        .project-card-caption{
+          margin-bottom: 8px;
+      
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 1.2;
+          letter-spacing: 0.02em;
+        }
+        .project-card-type{
+          font-size: 16px;
+          line-height: 1.5;
+          letter-spacing: 0.02em;
+      
+          color: var(--slate);
+        }
+        }
+
+/* ====== DESKTOP VERSION ========================================================================= */
