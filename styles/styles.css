@@ -79,14 +79,15 @@ h1, h2, h3, h4, p {
 
 /* ======MOBILE VERSION ========================================================================= */
 
-@media screen and (min-device-pixel-ratio: 1) and (max-width: 767.5px),
-       screen and (min-resolution : 96dpi) and (max-width: 767.5px),
-       screen and (min-resolution : 1dppx) and (max-width: 767.5px){
-  .hero-section {
-    background-image: 
-      linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
-      url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(mobile)@1x.jpg");
-   }
+@media 
+screen and (min-device-pixel-ratio: 1) and (max-width: 767.5px),
+screen and (min-resolution : 96dpi) and (max-width: 767.5px),
+screen and (min-resolution : 1dppx) and (max-width: 767.5px){
+.hero-section {
+  background-image: 
+    linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+    url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(mobile)@1x.jpg");
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767.5px),
@@ -315,7 +316,7 @@ h1, h2, h3, h4, p {
   }
 
   /*---Styles: Main Content -> section "Hero" */
-   .hero-section .container{
+  .hero-section .container{
     display: flex;
     flex-direction: column;
     align-items:center;
