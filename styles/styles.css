@@ -86,26 +86,28 @@ screen and (min-resolution : 1dppx) and (max-width: 767.5px){
 .hero-section {
   background-image: 
     linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
-    url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(mobile)@1x.jpg");
+    url("../images/hero/people-office-mobile@1x.jpg");
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767.5px),
-       screen and (min-resolution : 192dpi) and (max-width: 767.5px),
-       screen and (min-resolution : 2dppx) and (max-width: 767.5px){
-  .hero-section {
-    background-image: 
-      linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
-      url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(mobile)@2x.jpg");
+@media 
+screen and (min-device-pixel-ratio: 2) and (max-width: 767.5px),
+screen and (min-resolution : 192dpi) and (max-width: 767.5px),
+screen and (min-resolution : 2dppx) and (max-width: 767.5px){
+.hero-section {
+  background-image: 
+    linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+    url("../images/hero/people-office-mobile@2x.jpg");
   }
 }
-@media screen and (min-device-pixel-ratio: 3) and (max-width: 767.5px),
-       screen and (min-resolution : 288dpi) and (max-width: 767.5px),
-       screen and (min-resolution : 3dppx) and (max-width: 767.5px){
-  .hero-section {
-    background-image: 
-      linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
-      url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(mobile)@3x.jpg");
+@media 
+screen and (min-device-pixel-ratio: 3) and (max-width: 767.5px),
+screen and (min-resolution : 288dpi) and (max-width: 767.5px),
+screen and (min-resolution : 3dppx) and (max-width: 767.5px){
+.hero-section {
+  background-image: 
+    linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+    url("../images/hero/people-office-mobile@3x.jpg");
   }
 }
 
@@ -137,6 +139,7 @@ screen and (min-resolution : 1dppx) and (max-width: 767.5px){
     justify-content: space-between;
 
     min-width: 320px;
+    width: 767px;
     width: 100vw;
     height: 100vh;
     padding: 80px 40px 80px 40px;
@@ -874,12 +877,12 @@ screen and (min-resolution : 1dppx) and (max-width: 767.5px){
     .mobile-menu-container{
       overflow: auto;
     }
-    .modal,
     .mobile-menu-container{
       top: 2%;
       transform: translateX(-50%);
     }
   }
+
   @media screen and (max-width: 427.98px){
     .mobile-menu-contacts-item:first-child .link{
       font-size: 25px;  
@@ -1033,7 +1036,7 @@ screen and (min-resolution : 1dppx) and (max-width: 767.5px){
     .hero-section {
       background-image: 
         linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
-        url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(tablet)@1x.jpg");
+        url("../images/hero/people-office-tablet@1x.jpg");
     }
   }
   
@@ -1043,7 +1046,7 @@ screen and (min-resolution : 1dppx) and (max-width: 767.5px){
     .hero-section {
       background-image: 
         linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
-        url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(tablet)@2x.jpg");
+        url("../images/hero/people-office-tablet@2x.jpg");
     }
   }
   @media screen and (min-device-pixel-ratio: 3) and  (min-width: 768px) and (max-width: 1199.98px),
@@ -1052,7 +1055,7 @@ screen and (min-resolution : 1dppx) and (max-width: 767.5px){
     .hero-section {
       background-image: 
         linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
-        url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(tablet)@3x.jpg");
+        url("../images/hero/people-office-tablet@3x.jpg");
     }
   }
   @media screen and (min-width: 767.98px){
@@ -1296,36 +1299,40 @@ screen and (min-resolution : 1dppx) and (max-width: 767.5px){
   
 /* ====== DESKTOP VERSION ========================================================================= */
 
-    @media screen and (min-device-pixel-ratio: 1) and (min-width: 1200px),
-           screen and (min-resolution : 96dpi) and (min-width: 1200px),
-           screen and (min-resolution : 1dppx) and (min-width: 1200px){
-      .hero-section {
-        background-image: 
-          linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
-          url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(desktop)@1x.jpg");
-        }
-    }
-    
-    @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
-           screen and (min-resolution : 192dpi) and (min-width: 1200px),
-           screen and (min-resolution : 2dppx) and (min-width: 1200px){
-      .hero-section {
-        background-image: 
-          linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
-          url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(desktop)@2x.jpg");
-    
+    @media 
+    screen and (min-device-pixel-ratio: 1) and (min-width: 1200px),
+    screen and (min-resolution : 96dpi) and (min-width: 1200px),
+    screen and (min-resolution : 1dppx) and (min-width: 1200px){
+    .hero-section {
+      background-image: 
+        linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+        url("../images/hero//people-office-desktop@1x.jpg");
       }
     }
-    @media screen and (min-device-pixel-ratio: 3) and (min-width: 1200px),
-           screen and (min-resolution : 288dpi) and (min-width: 1200px),
-           screen and (min-resolution : 3dppx) and (min-width: 1200px){
-      .hero-section {
-        background-image: 
-          linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
-          url("../images/hero/working-people-in-the-office-with-labtops-on-the-table(desktop)@3x.jpg");
+    
+    @media 
+    screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution : 192dpi) and (min-width: 1200px),
+    screen and (min-resolution : 2dppx) and (min-width: 1200px){
+    .hero-section {
+      background-image: 
+        linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+        url("../images/hero//people-office-desktop@2x.jpg");
       }
     }
-        
+
+    @media 
+    screen and (min-device-pixel-ratio: 3) and (min-width: 1200px),
+    screen and (min-resolution : 288dpi) and (min-width: 1200px),
+    screen and (min-resolution : 3dppx) and (min-width: 1200px){
+    .hero-section {
+      background-image: 
+        linear-gradient(to right, var(--navy-blue-trans), var(--navy-blue-trans)),
+        url("../images/hero//people-office-desktop@3x.jpg");
+      }
+    }
+
+
     @media screen and (min-width: 1200px){
     
         /*------------Styles: Studio page-----------------*/
